@@ -35,6 +35,7 @@ public class SvnPluginResource extends AbstractIndexBasedPluginResource implemen
 	 */
 	public SvnPluginResource() {
 		super(KEY, "svn");
+		createUrl = "create_svn";
 	}
 
 	@Override
