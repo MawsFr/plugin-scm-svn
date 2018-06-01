@@ -1,8 +1,9 @@
 define(function () {
 	var current = {
 
-		configureSubscriptionParameters: function (configuration) {
-			current.$super('registerXServiceSelect2')(configuration, 'service:scm:svn:repository', 'service/scm/svn/', null, true, null, false);
+		configureSubscriptionParameters: function (configuration, $container) {
+			configuration.type = 'svn';
+			return current.$super('configureSubscriptionParameters')(configuration, $container);
 		},
 
 		/**
